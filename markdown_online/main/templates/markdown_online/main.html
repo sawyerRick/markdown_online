@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
+{% if content %}
+<div class="ui segment">
+    <strong>MARKDOWN_ONLINE!</strong>
+    <br/>
+    <input type=button value=编辑 onclick="window.history.go(-1)"/>
+    {{ content | safe}}
+</div>
+
+{% else %}
+<div class="ui segment">
+    <div class="ui form">
+      <div class="field">
+        <strong>MARKDOWN_ONLINE!</strong>
+          <form action="/" method="post" id="usrform">
+              <input type="submit" value="预览" />
+          </form>
+
+        <textarea form="usrform" name="content" rows="40"></textarea>
+      </div>
+    </div>
+</div>
+{% endif %}
+<script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.js"></script>
+<script>
+
+</script>
