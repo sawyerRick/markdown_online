@@ -1,10 +1,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'md_css/monokai.css' %}">
 
 {% if content %}
 <div class="ui segment">
     <strong>MARKDOWN_ONLINE!</strong>
     <br/>
     <input type=button value=编辑 onclick="window.history.go(-1)"/>
+
     {{ content | safe}}
 </div>
 
